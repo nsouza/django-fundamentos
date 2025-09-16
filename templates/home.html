@@ -1,21 +1,22 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% extends 'layout.html' %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+{% block content %}
     <h2>Pagina home {{ nome }}</h2>    
     <p>Ir para a pagina sobre <a href="/about">clique aqui</a> </p>
     <hr>
     <h3>Informaçao de Pessoas</h3>
     <p>Nome: {{ pessoa.nome }}</p>
     <p>Idade: {{ pessoa.idade }}</p>
-    <p>Cidade: {{ pessoa.cidade }}</p>
+    <p>Cidade: {{ pessoa.cidade }}</p> 
+{% endblock content %}
     
     
-</body>
-</html>
+
+
+
+
+  
